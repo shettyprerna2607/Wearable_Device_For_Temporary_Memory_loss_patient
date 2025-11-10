@@ -53,12 +53,12 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAnSPoJin2tJ78LrtwPV2l8v5ee7jswZC0',
-    appId: '1:912999334233:android:cf12b5f42afb3f60474c48',
-    messagingSenderId: '912999334233',
-    projectId: 'wearabledevice-c3a3d',
-    databaseURL: 'https://wearabledevice-c3a3d-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'wearabledevice-c3a3d.firebasestorage.app',
+    apiKey: ' ',
+    appId: ' ',
+    messagingSenderId: ' ',
+    projectId: ' ',
+    databaseURL: ' ',
+    storageBucket: ' ',
   );
 
 }
