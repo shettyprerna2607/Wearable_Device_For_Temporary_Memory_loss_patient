@@ -1,10 +1,5 @@
 /***********************************************************************************************
-   ESP8266 Pillbox (Firebase Version)
-   ----------------------------------------------------------
-   ✅ Buttons for morning / afternoon / evening
-   ✅ Continuous buzzer until pill taken
-   ✅ Firebase integration
-   ✅ WiFi & Firebase connecting animation
+   ESP8266 Pillbox
 ************************************************************************************************/
 
 #include <ESP8266WiFi.h>
