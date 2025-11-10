@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart'; // ✅ use the generated Firebase config
-import 'routes.dart'; // your custom routes file
-
+import 'firebase_options.dart'; 
+import 'routes.dart'; 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -12,7 +11,6 @@ void main() async {
     );
     runApp(const PatientWatchApp());
   } catch (e) {
-    // Show error screen if Firebase fails to initialize
     runApp(MaterialApp(
       home: Scaffold(
         body: Center(
