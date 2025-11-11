@@ -85,6 +85,9 @@ All data is uploaded to Firebase Realtime Database and viewed via a connected An
 
 ## 👩‍💻 Team
 Meghana M 
+
 Prerana A Shetty
+
 Princia D'Almeida
+
 Sana 
