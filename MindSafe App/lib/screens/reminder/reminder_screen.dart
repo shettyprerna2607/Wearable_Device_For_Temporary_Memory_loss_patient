@@ -43,7 +43,7 @@ class _ReminderScreenState extends State<ReminderScreen> {
           ),
         ),
         subtitle: Text(
-          taken == true ? '$label medication taken' : 'Reminder pending',
+          taken == true ? '$label pill taken' : 'Reminder pending',
           style: TextStyle(
             fontSize: 16,
             color: taken == true ? Colors.green.shade800 : Colors.orange.shade800,
@@ -78,6 +78,7 @@ class _ReminderScreenState extends State<ReminderScreen> {
           children: [
             const SizedBox(height: 32),
             _buildHeader(),
+
             StreamBuilder<bool?>(
               stream: _controller.morningStream,
               builder: (context, snapshot) => _buildReminderCard('Morning', snapshot.data),
@@ -89,6 +90,29 @@ class _ReminderScreenState extends State<ReminderScreen> {
             StreamBuilder<bool?>(
               stream: _controller.eveningStream,
               builder: (context, snapshot) => _buildReminderCard('Evening', snapshot.data),
+            ),
+
+            const SizedBox(height: 25),
+
+            // Reset button
+            ElevatedButton(
+              onPressed: () async {
+                await _controller.resetAllReminders();
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text("Reminders reset successfully")),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.deepPurpleAccent,
+                padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              child: const Text(
+                "Reset Reminders",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
+              ),
             ),
           ],
         ),
