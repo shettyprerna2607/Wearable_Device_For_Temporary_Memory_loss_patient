@@ -16,4 +16,12 @@ class ReminderController {
   Stream<bool?> get eveningStream => _eveningRef.onValue.map(
         (event) => event.snapshot.value != null ? event.snapshot.value as bool : null,
   );
+
+  Future<void> resetAllReminders() async {
+    await FirebaseDatabase.instance.ref('pillbox').update({
+      "morning": false,
+      "afternoon": false,
+      "evening": false,
+    });
+  }
 }
