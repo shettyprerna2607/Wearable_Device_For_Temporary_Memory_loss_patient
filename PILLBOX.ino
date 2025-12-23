@@ -11,10 +11,10 @@
 #include <WiFiUdp.h>
 
 // ---------------- Firebase Config ----------------
-#define WIFI_SSID "vivoY02t"
-#define WIFI_PASSWORD "sia@1234"
-#define API_KEY "AIzaSyDDeHe3AfF77q5HPj51WuyDJCwK4553Doc"
-#define DATABASE_URL "https://wearabledevice-c3a3d-default-rtdb.asia-southeast1.firebasedatabase.app/"
+#define WIFI_SSID " "
+#define WIFI_PASSWORD " "
+#define API_KEY " "
+#define DATABASE_URL " "
 
 FirebaseData fbdo;
 FirebaseAuth auth;
@@ -53,7 +53,7 @@ void setup() {
     if (dotCount > 3) {
       Serial.print("\b\b\b   \b\b\b");
       dotCount = 0;
-    }  // simple animation
+    } 
   }
   Serial.println("\n✅ WiFi Connected");
 

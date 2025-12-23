@@ -73,7 +73,7 @@ class _GpsScreenState extends State<GpsScreen> {
     final Color purpleStart = const Color(0xFFDAD7FE);
     final Color purpleEnd = const Color(0xFFF5E9FC);
     final Color purpleAccent = Colors.deepPurpleAccent;
-    const String geoapifyApiKey = "7b0fb918d87e4250bd5f831a8c36fe4e";
+    const String geoapifyApiKey = " ";
 
     return Scaffold(
       appBar: AppBar(

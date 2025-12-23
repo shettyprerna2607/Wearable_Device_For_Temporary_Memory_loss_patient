@@ -17,10 +17,10 @@
 #include <MAX30100_PulseOximeter.h>
 
 // ---------------- Firebase Config ----------------
-#define WIFI_SSID "vivoY02t"
-#define WIFI_PASSWORD "sia@1234"
-#define API_KEY "AIzaSyDDeHe3AfF77q5HPj51WuyDJCwK4553Doc"
-#define DATABASE_URL "https://wearabledevice-c3a3d-default-rtdb.asia-southeast1.firebasedatabase.app/"
+#define WIFI_SSID " "
+#define WIFI_PASSWORD " "
+#define API_KEY " "
+#define DATABASE_URL " "
 
 FirebaseData fbdo;
 FirebaseAuth auth;
@@ -143,8 +143,6 @@ void loop() {
       Firebase.RTDB.setString(&fbdo, "/wearable/alert", "✅ Within Safe Zone");
     } else {
       display.println("⚠️ OUT OF SAFE ZONE!");
-      
-      // Send alert + GPS coordinates to Firebase
       Firebase.RTDB.setString(&fbdo, "/wearable/alert", "⚠️ OUT OF SAFE ZONE!");
       Firebase.RTDB.setFloat(&fbdo, "/wearable/latitude", latitude);
       Firebase.RTDB.setFloat(&fbdo, "/wearable/longitude", longitude);
@@ -155,7 +153,6 @@ void loop() {
     display.display();
 
   } else {
-    // GPS not fixed yet
     display.clearDisplay();
     display.setCursor(0, 0);
     display.println("✨ Connecting to GPS ✨");
